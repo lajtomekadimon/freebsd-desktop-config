@@ -2,7 +2,7 @@
 My personal configuration for FreeBSD in desktop. It's designed for my personal
 case, so please don't use it; there are still some unresolved issues.
 
-This configuration uses i3 wm in a SSD + AMD Ryzen + NVIDIA environment.
+This configuration uses i3 + Compton in a SSD + AMD Ryzen + NVIDIA environment.
 
 ## Known issues
 
