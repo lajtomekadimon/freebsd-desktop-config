@@ -1,7 +1,7 @@
 USERNAME=lajto
 
 freebsd-conf:
-    echo "LANG=en_US.UTF-8; export LANG" >> /etc/profile
+	echo "LANG=en_US.UTF-8; export LANG" >> /etc/profile
 	echo "CHARSET=UTF-8; export CHARSET" >> /etc/profile
 	# FreeBSD config files
 	rm -f /boot/loader.conf && mv boot/loader.conf /boot/loader.conf
