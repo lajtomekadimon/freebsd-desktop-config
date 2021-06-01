@@ -39,9 +39,6 @@ Plug 'scrooloose/nerdtree'
 " VIM-AIRLANE (cool status bar)
 Plug 'vim-airline/vim-airline'
 
-" Minimap
-Plug 'severin-lemaignan/vim-minimap'
-
 " Initialize plugin system
 call plug#end()
 
@@ -67,10 +64,6 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 
 " NERDTree width
 let g:NERDTreeWinSize=56
-
-" Minimap
-autocmd VimEnter * Minimap
-let g:minimap_highlight='Visual'
 
 " Enable tabs
 let g:airline#extensions#tabline#enabled = 1

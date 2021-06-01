@@ -106,7 +106,7 @@ software:
 	# Install GUI software
 	pkg install \
 	www/firefox x11-fm/thunar archivers/thunar-archive-plugin \
-	graphics/atril graphics/viewnior editors/leafpad \
+	graphics/atril editors/leafpad \
 	archivers/engrampa multimedia/mpv graphics/gimp graphics/inkscape \
 	graphics/blender audio/audacity audio/kid3-qt5 \
 	editors/libreoffice net-p2p/transmission-gtk \
