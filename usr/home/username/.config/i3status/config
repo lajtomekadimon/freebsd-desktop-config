@@ -1,0 +1,47 @@
+# General
+############
+
+general {
+    output_format = "i3bar"
+    colors = true
+    color_good = "#202020"
+    color_degraded = "#e5871f"
+    color_bad = "#c83839"  
+    interval = 1
+}
+
+# Order
+##########
+
+order += "disk /"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "volume master"
+order += "tztime local"
+
+# Sections
+#############
+
+disk "/" {
+    format = "Free space: %avail"
+}
+
+cpu_usage {
+    format = "CPU: %usage"
+}
+
+cpu_temperature 0 {
+    format = "Temperature: %degrees℃"
+}
+
+volume master {
+        format = "Volume: %volume"
+        format_muted = "Volume: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M"
+}
