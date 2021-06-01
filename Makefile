@@ -60,7 +60,7 @@ xorg:
 	mkdir -p /usr/home/$(USERNAME)/.config/fontconfig
 	mv usr/home/username/.config/fontconfig/fonts.conf \
 	/usr/home/$(USERNAME)/.config/fontconfig/fonts.conf
-   	# Fix fonts
+	# Fix fonts
 	cd /usr/local/etc/fonts/conf.d; ln -s ../conf.avail/70-no-bitmaps.conf
 	# Xorg config
 	mv usr/local/etc/X11/xorg.conf.d /usr/local/etc/X11/
