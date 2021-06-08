@@ -10,24 +10,48 @@ URxvt.iso14755_52:    false
 URxvt.scrollBar:      false
 URxvt.internalBorder: 18
 
+!!!!!!!!!
 ! Colors
-*background:  #24272b
-*foreground:  #e4e5e0
-*cursorColor: #8d70ad
+!!!!!!!!!
 
-*color0:  #33303b
-*color8:  #4f4b58
-*color1:  #ff5c57
-*color9:  #ff5c57
-*color2:  #5af78e
-*color10: #5af78e
-*color3:  #f3f99d
-*color11: #f3f99d
-*color4:  #57c7ff
-*color12: #57c7ff
-*color5:  #ff6ac1
-*color13: #ff6ac1
-*color6:  #9aedfe
-*color14: #9aedfe
-*color7:  #eff0eb
-*color15: #eff0eb
+URxvt*foreground:  #eff0eb
+!URxvt*background: #1f2326
+URxvt*background:  #1b1e21
+URxvt*cursorColor: #97979b
+
+! Black + DarkGrey
+URxvt*color0: #282a36
+URxvt*color8: #686868
+
+! DarkRed + Red
+URxvt*color1: #ff5c57
+URxvt*color9: #ff5c57
+
+! DarkGreen + Green
+URxvt*color2:  #5af78e
+URxvt*color10: #5af78e
+
+! DarkYellow + Yellow
+URxvt*color3:  #f3f99d
+URxvt*color11: #f3f99d
+
+! DarkBlue + Blue
+URxvt*color4:  #57c7ff
+URxvt*color12: #57c7ff
+
+! DarkMagenta + Magenta
+URxvt*color5:  #ff6ac1
+URxvt*color13: #ff6ac1
+
+! DarkCyan + Cyan (both not tango)
+URxvt*color6:  #9aedfe
+URxvt*color14: #9aedfe
+
+! LightGrey + White
+URxvt*color7:  #eff0eb
+URxvt*color15: #f1f1f0
+
+! Bold, Italic, Underline
+!*.colorBD:
+!*.colorIT:
+!*.colorUL:

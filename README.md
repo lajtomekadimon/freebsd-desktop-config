@@ -69,9 +69,6 @@ Open Firefox and run `about:config` in the dir bar:
 - Set `ui.context_menus.after_mouseup` to `true`.
 - Set `extensions.pocket.enabled` to `false`.
 - Set `middlemouse.paste` to `false`.
-- Set `layers.acceleration.force-enabled` to `true`.
-- Set `browser.download.animateNotifications` to `false`.
-- Set `image.mem.animated.discardable` to `false`.
 - Create new value called `widget.content.gtk-theme-override`: `Adwaita`.
 
 Mount the second hard drive:

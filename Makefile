@@ -11,6 +11,9 @@ freebsd-conf:
 	rm -f /etc/pf.conf && mv etc/pf.conf /etc/pf.conf
 	rm -f /etc/rc.conf && mv etc/rc.conf /etc/rc.conf
 	rm -f /etc/sysctl.conf && mv etc/sysctl.conf /etc/sysctl.conf
+	# Add user to operator group (poweroff, reboot, mount...)
+	pw groupmod operator -M $(USERNAME)
+	pw groupmod wheel -M $(USERNAME)
 
 dirs:
 	# External USB devices mounts
@@ -56,7 +59,7 @@ xorg:
 	x11-fonts/charis x11-fonts/urwfonts-ttf russian/koi8r-ps \
 	x11-fonts/geminifonts x11-fonts/cyr-rfx x11-fonts/paratype \
 	x11-fonts/gentium-plus x11-fonts/sourcecodepro-ttf x11-fonts/noto \
-	x11-fonts/roboto-fonts-ttf x11-fonts/powerline-fonts
+	x11-fonts/roboto-fonts-ttf x11-fonts/powerline-fonts x11-fonts/hack-font
 	mkdir -p /usr/home/$(USERNAME)/.config/fontconfig
 	mv usr/home/username/.config/fontconfig/fonts.conf \
 	/usr/home/$(USERNAME)/.config/fontconfig/fonts.conf
@@ -66,8 +69,14 @@ xorg:
 	mv usr/local/etc/X11/xorg.conf.d /usr/local/etc/X11/
 	mkdir -p /usr/home/$(USERNAME)/.icons/
 	ln -s /usr/share/cursors/xorg-x11 /usr/home/$(USERNAME)/.icons
-	mv usr/home/username/.icons/Deepin-Cursor \
-	/usr/home/$(USERNAME)/.icons/Deepin-Cursor
+	mv usr/home/username/.icons/Deepin-Dark \
+	/usr/home/$(USERNAME)/.icons/Deepin-Dark
+	mkdir -p /usr/home/$(USERNAME)/.themes/
+	mv usr/home/username/.themes/deepin-dark \
+	/usr/home/$(USERNAME)/.themes/deepin-dark
+	mkdir -p /usr/home/$(USERNAME)/.local/share/icons/
+	mv usr/home/username/.local/share/icons/bloom-dark \
+	/usr/home/$(USERNAME)/.local/share/icons/bloom-dark
 	rm -f /usr/home/$(USERNAME)/.gtkrc-2.0
 	mv usr/home/username/.gtkrc-2.0 /usr/home/$(USERNAME)/.gtkrc-2.0
 	mkdir -p /usr/home/$(USERNAME)/.config/gtk-3.0
@@ -105,8 +114,8 @@ software:
 	multimedia/musikcube graphics/feh graphics/mupdf
 	# Install GUI software
 	pkg install \
-	www/firefox x11-fm/thunar archivers/thunar-archive-plugin \
-	graphics/atril editors/leafpad \
+	www/firefox x11-fm/pcmanfm \
+	graphics/atril editors/mousepad \
 	archivers/engrampa multimedia/mpv graphics/gimp graphics/inkscape \
 	graphics/blender audio/audacity audio/kid3-qt5 \
 	editors/libreoffice net-p2p/transmission-gtk \
@@ -117,6 +126,8 @@ software:
 	pkg install www/chromium
 	# LaTeX
 	pkg install print/texlive-full print/latex-biber
+	# Video games
+	pkg install emulators/dolphin-emu
 	# Webcam support
 	pkg install multimedia/webcamd multimedia/v4l_compat \
 	multimedia/v4l-utils
@@ -130,6 +141,8 @@ software:
 	pkg install sysutils/fusefs-simple-mtpfs
 	# Change permissions
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.config
+	chown -R $(USERNAME) /usr/home/$(USERNAME)/.icons
+	chown -R $(USERNAME) /usr/home/$(USERNAME)/.themes
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.Xresources
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.i3-wallpaper.png
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.gtkrc-2.0

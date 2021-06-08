@@ -14,6 +14,7 @@ general {
 ##########
 
 order += "disk /"
+order += "disk /mydata"
 order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "volume master"
@@ -23,25 +24,29 @@ order += "tztime local"
 #############
 
 disk "/" {
-    format = "Free space: %avail"
+    format = " root: %avail (%percentage_free) "
+}
+
+disk "/mydata" {
+    format = " mydata: %avail (%percentage_free) "
 }
 
 cpu_usage {
-    format = "CPU: %usage"
+    format = " CPU: %usage "
 }
 
 cpu_temperature 0 {
-    format = "Temperature: %degrees℃"
+    format = " T: %degrees℃ "
 }
 
 volume master {
-        format = "Volume: %volume"
-        format_muted = "Volume: muted (%volume)"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+    format = " V: %volume "
+    format_muted = " V: muted (%volume) "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
 
 tztime local {
-    format = "%Y-%m-%d %H:%M"
+    format = " %Y-%m-%d %H:%M "
 }

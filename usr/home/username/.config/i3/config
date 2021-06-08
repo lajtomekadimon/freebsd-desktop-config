@@ -14,10 +14,10 @@ set $alt Mod1
 
 # Use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 
 # Windows
 ############
@@ -69,7 +69,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 
 # Split in vertical orientation
 bindsym $mod+v split v
@@ -114,7 +114,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws0 "10"
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -126,7 +126,7 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+0 workspace $ws0
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -138,7 +138,7 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+0 move container to workspace $ws0
 
 # i3 loads
 #############
@@ -157,27 +157,27 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed 
 
 # Resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym $left       resize shrink width 10 px or 10 ppt
-        bindsym $down       resize grow height 10 px or 10 ppt
-        bindsym $up         resize shrink height 10 px or 10 ppt
-        bindsym $right      resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym $left  resize shrink width 10 px or 10 ppt
+    bindsym $down  resize grow height 10 px or 10 ppt
+    bindsym $up    resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
 
-        # Same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+    # Same bindings, but for the arrow keys
+    bindsym Left  resize shrink width 10 px or 10 ppt
+    bindsym Down  resize grow height 10 px or 10 ppt
+    bindsym Up    resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # Back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    # Back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -186,7 +186,7 @@ bindsym $mod+r mode "resize"
 ##############
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #69468c #502877 #ffffff #912ef4   #4d2877
+client.focused          #446789 #2f5e8e #ffffff #2ea7f2   #274e75
 client.focused_inactive #333333 #65606b #ffffff #4a474f   #65606b
 client.unfocused        #333333 #222222 #888888 #2b282d   #222222
 client.urgent           #352f3a #900000 #ffffff #900000   #900000
@@ -203,9 +203,9 @@ bar {
     colors {
         background #000000
         statusline #ffffff
-        separator #666666
+        separator  #666666
 
-        focused_workspace  #5d3e7c #512877 #ffffff
+        focused_workspace  #316ba0 #2f5e8e #ffffff
         active_workspace   #333333 #65606b #ffffff
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #342f3a #900000 #ffffff
@@ -216,7 +216,7 @@ bar {
 # dmenu
 ##########
 
-bindsym $mod+d exec --no-startup-id "dmenu_run -nb '#222222' -sf '#eeeeee' -sb '#5d3e7c' -nf '#bbbbbb'"
+bindsym $mod+d exec --no-startup-id "dmenu_run -nb '#222222' -sf '#eeeeee' -sb '#316ba0' -nf '#bbbbbb'"
 
 # Key bindings
 #################
@@ -226,6 +226,12 @@ bindsym $mod+n exec --no-startup-id "mixer vol -5 && killall -USR1 i3status"
 
 # Increase sound volume
 bindsym $mod+m exec --no-startup-id "mixer vol +5 && killall -USR1 i3status"
+
+# Decrease sound volume (microphone)
+bindsym $mod+Shift+n exec --no-startup-id "mixer -f /dev/mixer6 -s mic -5 && killall -USR1 i3status"
+
+# Increase sound volume (microphone)
+bindsym $mod+Shift+m exec --no-startup-id "mixer -f /dev/mixer6 -s mic +5 && killall -USR1 i3status"
 
 # Use speakers
 bindsym $mod+comma exec --no-startup-id "sysctl hw.snd.default_unit=4 && killall -USR1 i3status"
