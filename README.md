@@ -1,13 +1,8 @@
 # Lajto's FreeBSD desktop config
 My personal configuration for FreeBSD in desktop. It's designed for my personal
-case, so please don't use it; there are still some unresolved issues.
+case, so please don't use it.
 
 This configuration uses i3 + Compton in a SSD + AMD Ryzen + NVIDIA environment.
-
-## Known issues
-
-- Microphone can't be used properly.
-- Webcam can't be used properly.
 
 ## Installation
 
