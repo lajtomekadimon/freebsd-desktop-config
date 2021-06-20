@@ -90,6 +90,8 @@ i3wm:
 	x11/rxvt-unicode graphics/scrot \
 	x11-themes/adwaita-icon-theme x11-themes/adwaita-qt \
 	x11-themes/gtk-arc-themes
+	rm -f /usr/home/$(USERNAME)/.cshrc
+	mv usr/home/username/.cshrc /usr/home/$(USERNAME)/.cshrc
 	rm -f /usr/home/$(USERNAME)/.xinitrc
 	mv usr/home/username/.xinitrc /usr/home/$(USERNAME)/.xinitrc
 	rm -f /usr/home/$(USERNAME)/.Xresources
@@ -123,7 +125,9 @@ software:
 	security/keepassxc net-im/telegram-desktop \
 	games/anki
 	# Install extra web browsers
-	pkg install www/chromium
+	#pkg install www/chromium  (deprecated)
+	# Install Japanese and Chinese keyboard support
+	pkg install textproc/ibus japanese/ibus-mozc chinese/ibus-libpinyin
 	# LaTeX
 	pkg install print/texlive-full print/latex-biber
 	# Video games
@@ -147,6 +151,7 @@ software:
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.i3-wallpaper.png
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.gtkrc-2.0
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.xinitrc
+	chown -R $(USERNAME) /usr/home/$(USERNAME)/.cshrc
 	# wvim
 	cp usr/home/username/.wvim.sh /usr/home/$(USERNAME)/.wvim.sh
 	chmod a+x /usr/home/$(USERNAME)/.wvim.sh

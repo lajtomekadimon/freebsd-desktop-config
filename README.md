@@ -75,21 +75,15 @@ zpool import mydata
 #zpool import mydataext
 # Umount external ZFS drive
 #zpool export mydataext
+
+## Note about second hard drive; I did it like this:
+dd if=/dev/zero of=/dev/ada1 bs=1m  # Set all bits to 0
+glabel label -v mydata /dev/ada1  # Set 'mydata' as the label
+zpool create mydata /dev/label/mydata  # Create ZFS pool
+chown -R lajto /mydata  # Set permissions
 ```
 
 Done.
-
-Note about second hard drive; I did it like this:
-
-```sh
-dd if=/dev/zero of=/dev/ada1 bs=1m  # Set all bits to 0
-
-glabel label -v mydata /dev/ada1  # Set 'mydata' as the label
-
-zpool create mydata /dev/label/mydata  # Create ZFS pool
-
-chown -R lajto /mydata  # Set permissions
-```
 
 # Updates
 

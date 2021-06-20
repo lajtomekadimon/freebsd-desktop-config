@@ -18,6 +18,14 @@ compton -CGb --vsync opengl --no-fading-openclose &
 # SSH database
 eval "$(ssh-agent -s)"
 
+# ibus
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=xim
+export XMODIFIERS=@im=ibus
+/usr/local/bin/mozc start
+ibus-daemon -r --daemonize --xim
+export QT_IM_MODULE=ibus
+
 # i3
 exec /usr/local/bin/i3
 
