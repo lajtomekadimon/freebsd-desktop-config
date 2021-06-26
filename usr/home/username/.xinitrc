@@ -12,9 +12,6 @@ sysctl hw.snd.default_unit=5
 mixer vol 50
 sysctl hw.snd.default_unit=4
 
-# Compton
-compton -CGb --vsync opengl --no-fading-openclose &
-
 # SSH database
 eval "$(ssh-agent -s)"
 
@@ -26,6 +23,8 @@ export XMODIFIERS=@im=ibus
 ibus-daemon -r --daemonize --xim
 export QT_IM_MODULE=ibus
 
+# Compton
+compton -CGb --vsync opengl --no-fading-openclose &
+
 # i3
 exec /usr/local/bin/i3
-

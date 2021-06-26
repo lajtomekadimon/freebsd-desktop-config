@@ -30,9 +30,6 @@ Plug 'glench/vim-jinja2-syntax'
 " Svelte
 Plug 'evanleck/vim-svelte'
 
-" 80 char rule
-"Plug 'seletskiy/vim-over80'
-
 " Colorizer
 Plug 'lilydjwg/colorizer'
 
@@ -41,6 +38,9 @@ Plug 'scrooloose/nerdtree'
 
 " VIM-AIRLANE (cool status bar)
 Plug 'vim-airline/vim-airline'
+
+" Relative line number
+Plug 'myusuf3/numbers.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -55,6 +55,7 @@ let g:sql_type_default = 'pgsql'
 
 " Line numbers
 set number
+let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
