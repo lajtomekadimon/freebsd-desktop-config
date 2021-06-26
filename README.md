@@ -6,19 +6,19 @@ This configuration uses i3 + Compton in a SSD + AMD Ryzen + NVIDIA environment.
 
 ## Installation
 
-- Keymap: es.kbd
-- Hostname: lajto-bsd
+- Keymap: `es.kbd`
+- Hostname: `lajto-bsd`
 - Optional system components to install:
-    - kernel-dbg
-    - lib32
-    - ports
-    - src
+    - `kernel-dbg`
+    - `lib32`
+    - `ports`
+    - `src`
 - Partitioning: Auto (ZFS) (swap size: 8G)
 - Services to be started at boot:
-    - sshd
-    - ntpd
-    - powerd
-    - dumpdev
+    - `sshd`
+    - `ntpd`
+    - `powerd`
+    - `dumpdev`
 - System security hardening options: all of them
 - Create `lajto` user and add it to the `wheel` group.
 
