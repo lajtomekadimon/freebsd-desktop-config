@@ -125,7 +125,7 @@ software:
 	security/keepassxc net-im/telegram-desktop \
 	games/anki
 	# Install extra web browsers
-	#pkg install www/chromium  (deprecated)
+	pkg install www/chromium
 	# Install Japanese and Chinese keyboard support
 	pkg install textproc/ibus japanese/ibus-mozc chinese/ibus-libpinyin
 	# LaTeX
