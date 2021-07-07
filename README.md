@@ -41,7 +41,8 @@ git clone https://github.com/lajtomekadimon/freebsd-desktop-config
 cd freebsd-desktop-config
 ```
 
-Configure FreeBSD:
+Configure FreeBSD (change the username in the Makefile and the
+hostname in etc/rc.conf if needed):
 
 ```sh
 # Configure (many confirmations will be required)
