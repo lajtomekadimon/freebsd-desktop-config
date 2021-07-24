@@ -143,6 +143,9 @@ software:
 	pkg install sysutils/fusefs-ntfs
 	# MTP (Android, iPhone...)
 	pkg install sysutils/fusefs-simple-mtpfs
+	# VirtualBox
+	pkg install emulators/virtualbox-ose
+	pw groupmod vboxusers -m $(USERNAME)
 	# Change permissions
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.config
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.icons
