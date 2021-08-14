@@ -113,10 +113,11 @@ software:
 	# Install terminal software
 	pkg install sysutils/screenfetch sysutils/neofetch editors/vim \
 	sysutils/tmux sysutils/py-glances sysutils/py-ranger \
-	multimedia/musikcube graphics/feh graphics/mupdf audio/mixertui
+	multimedia/musikcube graphics/feh graphics/mupdf audio/mixertui \
+	misc/cloc
 	# Install GUI software
 	pkg install \
-	www/firefox x11-fm/pcmanfm \
+	www/firefox x11-fm/pcmanfm graphics/eom \
 	graphics/atril editors/mousepad \
 	archivers/engrampa multimedia/mpv graphics/gimp graphics/inkscape \
 	graphics/blender audio/audacity audio/kid3-qt5 \
