@@ -109,7 +109,8 @@ i3wm:
 
 software:
 	# Install file compression utilities
-	pkg install archivers/zip archivers/unzip archivers/unrar
+	pkg install archivers/zip archivers/unzip archivers/unrar \
+	archivers/p7zip archivers/p7zip-codec-rar
 	# Install terminal software
 	pkg install sysutils/screenfetch sysutils/neofetch editors/vim \
 	sysutils/tmux sysutils/py-glances sysutils/py-ranger \
@@ -132,7 +133,7 @@ software:
 	# LaTeX
 	pkg install print/texlive-full print/latex-biber
 	# Video games
-	pkg install emulators/dolphin-emu
+	pkg install emulators/dolphin-emu emulators/pcsxr
 	# Webcam support
 	pkg install multimedia/webcamd multimedia/v4l_compat \
 	multimedia/v4l-utils
