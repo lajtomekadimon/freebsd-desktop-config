@@ -21,7 +21,7 @@ URxvt*background:  #1d1f21
 URxvt*cursorColor: #dddddd
 
 ! Black + DarkGrey
-URxvt*color0: #1d1f21
+URxvt*color0: #1c1c1e
 URxvt*color8: #666666
 
 ! DarkRed + Red

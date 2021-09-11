@@ -59,7 +59,8 @@ xorg:
 	x11-fonts/charis x11-fonts/urwfonts-ttf russian/koi8r-ps \
 	x11-fonts/geminifonts x11-fonts/cyr-rfx x11-fonts/paratype \
 	x11-fonts/gentium-plus x11-fonts/sourcecodepro-ttf x11-fonts/noto \
-	x11-fonts/roboto-fonts-ttf x11-fonts/powerline-fonts x11-fonts/hack-font
+	x11-fonts/roboto-fonts-ttf x11-fonts/powerline-fonts x11-fonts/hack-font \
+	x11-fonts/intlfonts
 	mkdir -p /usr/home/$(USERNAME)/.config/fontconfig
 	mv usr/home/username/.config/fontconfig/fonts.conf \
 	/usr/home/$(USERNAME)/.config/fontconfig/fonts.conf
