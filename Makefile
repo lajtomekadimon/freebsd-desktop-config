@@ -149,6 +149,10 @@ software:
 	# VirtualBox
 	pkg install emulators/virtualbox-ose
 	pw groupmod vboxusers -m $(USERNAME)
+	# Vim
+	rm -f /usr/home/$(USERNAME)/.vimrc
+	wget -O /usr/home/$(USERNAME)/.vimrc \
+	https://raw.githubusercontent.com/lajtomekadimon/vim-config/main/.vimrc
 	# Change permissions
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.config
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.icons
@@ -158,6 +162,7 @@ software:
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.gtkrc-2.0
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.xinitrc
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.cshrc
+	chown -R $(USERNAME) /usr/home/$(USERNAME)/.vimrc
 	# wvim
 	cp usr/home/username/.wvim.sh /usr/home/$(USERNAME)/.wvim.sh
 	chmod a+x /usr/home/$(USERNAME)/.wvim.sh
