@@ -70,14 +70,6 @@ xorg:
 	mv usr/local/etc/X11/xorg.conf.d /usr/local/etc/X11/
 	mkdir -p /usr/home/$(USERNAME)/.icons/
 	ln -s /usr/share/cursors/xorg-x11 /usr/home/$(USERNAME)/.icons
-	mv usr/home/username/.icons/Deepin-Dark \
-	/usr/home/$(USERNAME)/.icons/Deepin-Dark
-	mkdir -p /usr/home/$(USERNAME)/.themes/
-	mv usr/home/username/.themes/deepin-dark \
-	/usr/home/$(USERNAME)/.themes/deepin-dark
-	mkdir -p /usr/home/$(USERNAME)/.local/share/icons/
-	mv usr/home/username/.local/share/icons/bloom-dark \
-	/usr/home/$(USERNAME)/.local/share/icons/bloom-dark
 	rm -f /usr/home/$(USERNAME)/.gtkrc-2.0
 	mv usr/home/username/.gtkrc-2.0 /usr/home/$(USERNAME)/.gtkrc-2.0
 	mkdir -p /usr/home/$(USERNAME)/.config/gtk-3.0
@@ -156,7 +148,6 @@ software:
 	# Change permissions
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.config
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.icons
-	chown -R $(USERNAME) /usr/home/$(USERNAME)/.themes
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.Xresources
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.i3-wallpaper.png
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.gtkrc-2.0
