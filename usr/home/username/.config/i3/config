@@ -186,10 +186,10 @@ bindsym $mod+r mode "resize"
 ##############
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #446789 #2f5e8e #ffffff #2ea7f2   #274e75
+client.focused          #446789 #0087af #ffffff #2ea7f2   #0087af
 client.focused_inactive #333333 #65606b #ffffff #4a474f   #65606b
-client.unfocused        #333333 #222222 #888888 #2b282d   #222222
-client.urgent           #352f3a #900000 #ffffff #900000   #900000
+client.unfocused        #333333 #eeeeee #888888 #2b282d   #eeeeee
+client.urgent           #352f3a #e73636 #ffffff #e73636   #e73636
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
@@ -201,22 +201,22 @@ bar {
     position top
     status_command i3status
     colors {
-        background #000000
-        statusline #ffffff
-        separator  #666666
+        background #eeeeee
+        statusline #444444
+        separator  #444444
 
-        focused_workspace  #316ba0 #2f5e8e #ffffff
-        active_workspace   #333333 #65606b #ffffff
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #342f3a #900000 #ffffff
-        binding_mode       #342f3a #900000 #ffffff
+        focused_workspace  #0d97c0 #0087af #ffffff
+        active_workspace   #dddddd #eeeeee #bbbbbb
+        inactive_workspace #cccccc #dddddd #777777
+        urgent_workspace   #ef5555 #e73636 #ffffff
+        binding_mode       #ef5555 #e73636 #ffffff
     }
 }
 
 # dmenu
 ##########
 
-bindsym $mod+d exec --no-startup-id "dmenu_run -nb '#222222' -sf '#eeeeee' -sb '#316ba0' -nf '#bbbbbb'"
+bindsym $mod+d exec --no-startup-id "dmenu_run -fn 'Source Code Pro:normal:pixelsize=14' -nb '#eeeeee' -nf '#444444' -sf '#ffffff' -sb '#0087af'"
 
 # Key bindings
 #################

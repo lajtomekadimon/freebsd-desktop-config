@@ -1,6 +1,9 @@
-Xcursor.theme: Deepin-Dark
+
+! Cursor
+Xcursor.theme: Adwaita
 Xcursor.size:  24
 
+! urxvt terminal
 URxvt*termName:       rxvt-256color
 URxvt*font:           xft:Source Code Pro:pixelsize=14,xft:Inconsolata\ for\ Powerline:pixelsize=12
 URxvt.depth:          0
@@ -16,41 +19,41 @@ URxvt.internalBorder: 18
 ! Colors
 !!!!!!!!!
 
-URxvt*foreground:  #c5c8c6
-URxvt*background:  #1d1f21
-URxvt*cursorColor: #dddddd
+URxvt*foreground:  #444444
+URxvt*background:  #eeeeee
+URxvt*cursorColor: #444444
 
 ! Black + DarkGrey
-URxvt*color0: #1c1c1e
-URxvt*color8: #666666
+URxvt*color0: #eeeeee
+URxvt*color8: #bcbcbc
 
 ! DarkRed + Red
-URxvt*color1: #cc6666
-URxvt*color9: #d54e53
+URxvt*color1: #af0000
+URxvt*color9: #d70000
 
 ! DarkGreen + Green
-URxvt*color2:  #b5bd68
-URxvt*color10: #b9ca4a
+URxvt*color2:  #008700
+URxvt*color10: #d70087
 
 ! DarkYellow + Yellow
-URxvt*color3:  #f0c674
-URxvt*color11: #e7c547
+URxvt*color3:  #5f8700
+URxvt*color11: #8700af
 
 ! DarkBlue + Blue
-URxvt*color4:  #81a2be
-URxvt*color12: #7aa6da
+URxvt*color4:  #0087af
+URxvt*color12: #d75f00
 
 ! DarkMagenta + Magenta
-URxvt*color5:  #b294bb
-URxvt*color13: #c397d8
+URxvt*color5:  #878787
+URxvt*color13: #d75f00
 
-! DarkCyan + Cyan (both not tango)
-URxvt*color6:  #8abeb7
-URxvt*color14: #70c0b1
+! DarkCyan + Cyan
+URxvt*color6:  #005f87
+URxvt*color14: #005faf
 
 ! LightGrey + White
-URxvt*color7:  #c5c8c6
-URxvt*color15: #eaeaea
+URxvt*color7:  #444444
+URxvt*color15: #005f87
 
 ! Bold, Italic, Underline
 !*.colorBD:
