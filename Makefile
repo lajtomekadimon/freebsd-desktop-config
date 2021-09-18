@@ -80,7 +80,7 @@ xorg:
 i3wm:
 	# Install and configure i3
 	pkg install x11-wm/i3 x11/i3status x11/i3lock x11/dmenu \
-	x11/rxvt-unicode graphics/scrot \
+	x11/rxvt-unicode graphics/scrot x11-wm/picom \
 	x11-themes/adwaita-icon-theme x11-themes/adwaita-qt \
 	x11-themes/gtk-arc-themes x11-themes/gnome-themes-extra
 	rm -f /usr/home/$(USERNAME)/.cshrc
@@ -108,7 +108,7 @@ software:
 	pkg install sysutils/screenfetch sysutils/neofetch editors/vim \
 	sysutils/tmux sysutils/py-glances sysutils/py-ranger \
 	multimedia/musikcube graphics/feh graphics/mupdf audio/mixertui \
-	misc/cloc
+	misc/cloc devel/tokei
 	# Install GUI software
 	pkg install \
 	www/firefox x11-fm/pcmanfm graphics/eom \

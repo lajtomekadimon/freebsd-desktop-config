@@ -23,8 +23,8 @@ export XMODIFIERS=@im=ibus
 ibus-daemon -r --daemonize --xim
 export QT_IM_MODULE=ibus
 
-# Compton
-compton -CGb --vsync opengl --no-fading-openclose &
+# picom (compton's replacement)
+picom -CGb --vsync opengl --no-fading-openclose &
 
 # i3
 exec /usr/local/bin/i3
