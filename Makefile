@@ -99,6 +99,7 @@ i3wm:
 	/usr/home/$(USERNAME)/.config/i3status/config
 	mv usr/home/username/.i3-wallpaper.png \
 	/usr/home/$(USERNAME)/.i3-wallpaper.png
+	ln -s /usr/local/share/icons/Adwaita /usr/home/$(USERNAME)/.icons
 
 software:
 	# Install file compression utilities
