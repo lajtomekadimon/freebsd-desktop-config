@@ -1,0 +1,29 @@
+# Load custom options (cursor theme, u-rxvt theme...)
+xrdb ~/.Xresources
+
+# Screen always on
+xset s off
+xset -dpms
+
+# Set default volume to 50%
+mixer vol 50
+
+# SSH database
+eval "$(ssh-agent -s)"
+
+# ibus
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=xim
+export XMODIFIERS=@im=ibus
+/usr/local/bin/mozc start
+ibus-daemon -r --daemonize --xim
+export QT_IM_MODULE=ibus
+
+# Compton
+compton -CGb --vsync opengl --no-fading-openclose &
+
+# Screen resolution
+xrandr --size 1600x900
+
+# i3
+exec /usr/local/bin/i3

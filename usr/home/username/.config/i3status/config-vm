@@ -14,9 +14,7 @@ general {
 ##########
 
 order += "disk /"
-order += "disk /mydata"
 order += "cpu_usage"
-order += "cpu_temperature 0"
 order += "volume master"
 order += "tztime local"
 
@@ -27,16 +25,8 @@ disk "/" {
     format = " root: %avail free (%percentage_free) "
 }
 
-disk "/mydata" {
-    format = " mydata: %avail free (%percentage_free) "
-}
-
 cpu_usage {
     format = " CPU: %usage "
-}
-
-cpu_temperature 0 {
-    format = " T: %degrees℃ "
 }
 
 volume master {
