@@ -2,23 +2,23 @@ USERNAME=lajto  # Change the username if needed!
 PLATFORM=desktop  # Alternative: vm
 
 .if $(PLATFORM)==desktop
-	LOADERFILE=loader.conf
-	DEVFSCONFFILE=devfs.conf
-	FSTABFILE=fstab
-	RCFILE=rc.conf
-	SYSCTLFILE=sysctl.conf
-	XORGCONFDIR=xorg.conf.d
-	XINITRCFILE=.xinitrc
-	I3STATUSCONFIGFILE=config
+LOADERFILE=loader.conf
+DEVFSCONFFILE=devfs.conf
+FSTABFILE=fstab
+RCFILE=rc.conf
+SYSCTLFILE=sysctl.conf
+XORGCONFDIR=xorg.conf.d
+XINITRCFILE=.xinitrc
+I3STATUSCONFIGFILE=config
 .elif $(PLATFORM)==vm
-	LOADERFILE=loader-vm.conf
-	DEVFSCONFFILE=devfs-vm.conf
-	FSTABFILE=fstab-vm
-	RCFILE=rc-vm.conf
-	SYSCTLFILE=sysctl-vm.conf
-	XORGCONFDIR=xorg.conf.d-vm
-	XINITRCFILE=.xinitrc-vm
-	I3STATUSCONFIGFILE=config-vm
+LOADERFILE=loader-vm.conf
+DEVFSCONFFILE=devfs-vm.conf
+FSTABFILE=fstab-vm
+RCFILE=rc-vm.conf
+SYSCTLFILE=sysctl-vm.conf
+XORGCONFDIR=xorg.conf.d-vm
+XINITRCFILE=.xinitrc-vm
+I3STATUSCONFIGFILE=config-vm
 .endif
 
 
@@ -139,6 +139,15 @@ i3wm:
 	cp usr/home/username/.i3-wallpaper.png \
 	/usr/home/$(USERNAME)/.i3-wallpaper.png
 	chown -R $(USERNAME) /usr/home/$(USERNAME)/.i3-wallpaper.png
+
+update-i3:
+	rm -f /usr/home/$(USERNAME)/.config/i3/config
+	cp usr/home/username/.config/i3/config \
+	/usr/home/$(USERNAME)/.config/i3/config
+	rm -f /usr/home/$(USERNAME)/.config/i3status/config
+	cp usr/home/username/.config/i3status/$(I3STATUSCONFIGFILE) \
+	/usr/home/$(USERNAME)/.config/i3status/config
+
 
 software:
 	# File compression utilities
