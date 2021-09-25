@@ -2,7 +2,8 @@
 My personal configuration for FreeBSD in desktop. It's designed for my personal
 case, so please don't use it.
 
-This configuration uses i3 window manager in an AMD Ryzen + NVIDIA environment.
+This configuration uses i3 window manager. In the Makefile, `desktop` asumes
+a AMD Ryzen + NVIDIA environment, and `vm` asumes a VirtualBox environment.
 
 ## Installation
 
