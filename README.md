@@ -71,7 +71,7 @@ Open Firefox and run `about:config` in the dir bar:
 Mount the second hard drive:
 
 ```sh
-zpool import mydata
+zpool import mydata  # will still be on after reboot
 
 # Mount external ZFS drive
 #zpool import mydataext
